@@ -1,0 +1,43 @@
+{% extends "base.html" %} 
+
+{% block content %}
+
+    <section>
+        <h2 class="text-xl mb-2"> Dataset preview using a TABLE in HTML</h2>
+        <table class="table-auto">
+            <thead>
+                <tr>
+                    <th class="px-4 py-2">Data as of</th>
+                    <th class="px-4 py-2">Age group</th>
+                    <th class="px-4 py-2">COVID-19 Deaths</th>
+                    <th class="px-4 py-2">Indicator</th>
+                    <th class="px-4 py-2">Sex</th>
+                    <th class="px-4 py-2">Race or Hispanic Origin Group</th>
+                    <th class="px-4 py-2">Start Week</th>
+                    <th class="px-4 py-2">End Week</th>                  
+                </tr>
+            </thead>
+            <tbody>
+                {% for data in data.values %}
+                <tr>
+                    <td class="border px-4 py-2">{{ data[0] }}</td>
+                    <td class="border px-4 py-2">{{ data[1] }}</td>
+                    <td class="border px-4 py-2">{{ data[2] }}</td>
+                    <td class="border px-4 py-2">{{ data[3] }}</td>
+                    <td class="border px-4 py-2">{{ data[4] }}</td>
+                    <td class="border px-4 py-2">{{ data[5] }}</td>
+                    <td class="border px-4 py-2">{{ data[6] }}</td>
+                    <td class="border px-4 py-2">{{ data[7] }}</td>
+                    <td class="border px-4 py-2">{{ data[8] }}</td>
+                    <td class="border px-4 py-2">{{ data[9] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+
+{% endblock %}
+
+   
+   
+   

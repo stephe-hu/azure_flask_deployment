@@ -11,11 +11,12 @@ def index():
 def about():
     return render_template('about.html')
 
-df = pd.read_csv('covid_deaths.csv')
+df = pd.read_csv('https://raw.githubusercontent.com/stephe-hu/azure_flask_deployment/main/data/covid_deaths.csv')
 @app.route('/data')
 def data(data=df):
     data = data.sample(15)
     return render_template('data.html', data=data)
+
 
 if __name__ == '__main__':
     app.run(
