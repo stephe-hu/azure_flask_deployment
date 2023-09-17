@@ -17,7 +17,6 @@ def data(data=df):
     data = data.sample(15)
     return render_template('data.html', data=data)
 
-
 if __name__ == '__main__':
     app.run(
         debug=True,
